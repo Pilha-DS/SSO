@@ -20,15 +20,15 @@ Estudar sozinho é desafiador. Muitas vezes perdemos o foco, não sabemos o que 
 
 O Self-Study Organizer é um ecossistema de estudo que oferece:
 
-    📝 Gerenciamento completo de conhecimento: Crie notas gerais, organize por cursos, indexe vídeos do YouTube, salve aulas baixadas e gerencie livros com links para PDFs e outros formatos.
+- 📝 Gerenciamento completo de conhecimento: Crie notas gerais, organize por cursos, indexe vídeos do YouTube, salve aulas baixadas e gerencie livros com links para PDFs e outros formatos.
 
-    🧠 Estudo Espaçado (Spaced Repetition): Assim como o Anki, o sistema ajuda você a revisar conteúdos nos momentos certos para fixar o aprendizado na memória de longo prazo.
+- 🧠 Estudo Espaçado (Spaced Repetition): Assim como o Anki, o sistema ajuda você a revisar conteúdos nos momentos certos para fixar o aprendizado na memória de longo prazo.
 
-    ⏱️ Técnicas de Estudo: Ative ou desative ferramentas como Pomodoro, Feynman Technique e outras conforme sua necessidade.
+- ⏱️ Técnicas de Estudo: Ative ou desative ferramentas como Pomodoro, Feynman Technique e outras conforme sua necessidade.
 
-    🤝 Compartilhamento de Conhecimento: Crie seu próprio curso dentro da plataforma, dividido em etapas e módulos, e compartilhe com outras pessoas que estão na mesma fase de aprendizado que você.
+- 🤝 Compartilhamento de Conhecimento: Crie seu próprio curso dentro da plataforma, dividido em etapas e módulos, e compartilhe com outras pessoas que estão na mesma fase de aprendizado que você.
 
-    🌐 Multi-plataforma: Acesse via web ou aplicativo nativo disponível para download gratuito.
+- 🌐 Multi-plataforma: Acesse via web ou aplicativo nativo disponível para download gratuito.
 
 ---
 
@@ -72,15 +72,15 @@ A arquitetura foi projetada para ser escalável, modular e educativa — um play
 
 ### Modelo de Negócio
 
-    🆓 Modelo Gratuito: Todo o código é aberto e você pode hospedar em seus próprios servidores.
+- 🆓 Modelo Gratuito: Todo o código é aberto e você pode hospedar em seus próprios servidores.
 
-    ☁️ Modelo SaaS Pago: Oferecerei uma versão hospedada em meus servidores para quem não quiser gerenciar a infraestrutura.
+- ☁️ Modelo SaaS Pago: Oferecerei uma versão hospedada em meus servidores para quem não quiser gerenciar a infraestrutura.
 
-    🔄 Revenda: O sistema terá suporte a gateways de pagamento, permitindo que você hospede e venda o serviço para outros.
+- 🔄 Revenda: O sistema terá suporte a gateways de pagamento, permitindo que você hospede e venda o serviço para outros.
 
 ---
 
-## 4. 🏗️ Estrutura Básica
+## 4. Estrutura Básica
 
 ```
 self-study-organizer/
@@ -104,7 +104,7 @@ self-study-organizer/
 
 ---
 
-## 5. 🚀 Estrutura Avançada
+## 5. Estrutura Avançada
 ### Backend (Java 21 + Spring Boot)
 
 ```
