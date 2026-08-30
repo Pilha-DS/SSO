@@ -4,9 +4,8 @@
 
 [English](README.md) | [Português](README.pt.md) | [Español](README.es.md)
 
-<div align="left">
-  <img src="https://shields.io" alt="Java" />
-  <img src="https://shields.io" alt="Spring Boot" />
-  <img src="https://shields.io" alt="MySQL" />
-  <img src="https://shields.io" alt="Kafka" />
-</div>
+[![Java](https://shields.io)](https://oracle.com)
+[![Spring Boot](https://shields.io)](https://spring.io)
+[![MySQL](https://shields.io)](https://mysql.com)
+[![Apache Kafka](https://shields.io)](https://apache.org)
+
