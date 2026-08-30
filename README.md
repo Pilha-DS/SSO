@@ -4,8 +4,4 @@
 
 [English](README.md) | [Português](README.pt.md) | [Español](README.es.md)
 
-<a href="https://skillicons.dev">
-  <img src="https://skillicons.dev/icons?i=angular" />
-</a>
-
-![angular](https://skillicons.dev/icons?i=angular)
+![angular](https://skillicons.dev/icons?i=angular) ![angular](https://skillicons.dev/icons?i=angular) ![angular](https://skillicons.dev/icons?i=angular) ![angular](https://skillicons.dev/icons?i=angular) ![java](https://skillicons.dev/icons?i=)
