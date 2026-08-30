@@ -40,7 +40,7 @@ A arquitetura foi projetada para ser escalável, modular e educativa — um play
 ┌─────────────────────────────────────────────────────────────┐
 │                     Frontend (Web & App)                    │
 │  ┌──────────────┐  ┌──────────────┐  ┌──────────────────┐   │
-│  │  Angular Web │  │ Flutter (App)│  │  PWA (futuro)    │    │
+│  │  Angular Web │  │ Flutter (App)│  │  PWA (futuro)    │   │
 │  └──────────────┘  └──────────────┘  └──────────────────┘   │
 └─────────────────────────────────────────────────────────────┘
                               │
@@ -68,4 +68,131 @@ A arquitetura foi projetada para ser escalável, modular e educativa — um play
 │   - Usuários         │  │   - Sincronização                │
 │   - Cursos/Notas     │  │   - Processamento assíncrono     │
 └──────────────────────┘  └──────────────────────────────────┘
+```
+
+### Modelo de Negócio
+
+    🆓 Modelo Gratuito: Todo o código é aberto e você pode hospedar em seus próprios servidores.
+
+    ☁️ Modelo SaaS Pago: Oferecerei uma versão hospedada em meus servidores para quem não quiser gerenciar a infraestrutura.
+
+    🔄 Revenda: O sistema terá suporte a gateways de pagamento, permitindo que você hospede e venda o serviço para outros.
+
+---
+
+## 4. 🏗️ Estrutura Básica
+
+```
+self-study-organizer/
+├── backend/
+│   ├── api-gateway/          # Spring Cloud Gateway
+│   ├── auth-service/         # Autenticação e autorização
+│   ├── notes-service/        # Gerenciamento de notas
+│   ├── courses-service/      # Cursos, módulos e etapas
+│   ├── repetition-service/   # Algoritmos de spaced repetition
+│   ├── media-service/        # Upload e indexação de mídia
+│   ├── share-service/        # Compartilhamento de conhecimento
+│   ├── payments-service/     # Gateway de pagamentos
+│   └── pomodoro-service/     # Técnica Pomodoro
+├── frontend/
+│   ├── web/                  # Angular
+│   └── mobile/               # Flutter
+└── docker/
+    ├── docker-compose.yml    # Orquestração dos serviços
+    └── .env.example
+```
+
+---
+
+## 5. 🚀 Estrutura Avançada
+### Backend (Java 21 + Spring Boot)
+
+```
+backend/
+├── config/                   # Configurações centralizadas
+├── common/                   # Bibliotecas compartilhadas
+│   ├── dto/                  # Data Transfer Objects
+│   ├── exception/            # Tratamento global de exceções
+│   └── security/             # Configurações de segurança JWT
+├── infrastructure/
+│   ├── persistence/          # Repositories JPA
+│   ├── messaging/            # Configuração do Kafka
+│   └── cache/                # Redis (futuro)
+└── services/
+    ├── [cada serviço]/       # Microserviço individual
+    │   ├── controller/       # REST endpoints
+    │   ├── service/          # Regras de negócio
+    │   ├── model/            # Entidades JPA
+    │   └── event/            # Eventos Kafka
+    └── shared/
+        └── kafka/
+            ├── consumer/     # Consumidores de eventos
+            └── producer/     # Produtores de eventos
+```
+
+### Frontend
+#### Web (Angular)
+```
+frontend/web/
+├── src/
+│   ├── app/
+│   │   ├── core/             # Serviços e interceptors
+│   │   ├── shared/           # Componentes reutilizáveis
+│   │   ├── features/         # Módulos por funcionalidade
+│   │   │   ├── dashboard/
+│   │   │   ├── courses/
+│   │   │   ├── notes/
+│   │   │   ├── repetition/
+│   │   │   └── settings/
+│   │   └── store/            # NgRx (state management)
+│   └── assets/
+│       ├── i18n/             # Internacionalização
+│       └── styles/
+```
+#### Mobile (Flutter)
+
+```
+frontend/mobile/
+├── lib/
+│   ├── core/                 # Serviços, DI, config
+│   ├── features/             # Módulos de features
+│   ├── models/               # Data models
+│   ├── providers/            # State management (Riverpod/Bloc)
+│   └── widgets/              # Componentes UI
+└── assets/
+```
+
+---
+
+## 6. Instalação
+Pré-requisitos
+
+    Instalacao Avancada
+    Docker e Docker Compose ou kubernets
+
+    Instalacao avancada
+    Java 21 LTS
+
+    Node.js 18+ + Angular CLI
+
+    Flutter SDK (para mobile)
+
+Opção 1: Ambiente Completo (Docker)
+
+```
+# Clone o repositório
+git clone https://github.com/Pilha-DS/self-study-organizer.git
+cd self-study-organizer
+
+# Configure as variáveis de ambiente
+cp docker/.env.example docker/.env
+# Edite o .env com suas configurações
+
+# Inicie todos os serviços
+docker-compose up -d
+
+# Acesse:
+# - Web: http://localhost:4200
+# - API Gateway: http://localhost:8080
+# - Swagger UI: http://localhost:8080/swagger-ui.html
 ```
