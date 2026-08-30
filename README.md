@@ -36,6 +36,7 @@ O Self-Study Organizer é um ecossistema de estudo que oferece:
 
 A arquitetura foi projetada para ser escalável, modular e educativa — um playground real para aplicar conceitos modernos de engenharia de software.
 
+```
 ┌─────────────────────────────────────────────────────────────┐
 │                     Frontend (Web & App)                    │
 │  ┌──────────────┐  ┌──────────────┐  ┌──────────────────┐   │
@@ -67,3 +68,4 @@ A arquitetura foi projetada para ser escalável, modular e educativa — um play
 │   - Usuários         │  │   - Sincronização                │
 │   - Cursos/Notas     │  │   - Processamento assíncrono     │
 └──────────────────────┘  └──────────────────────────────────┘
+```
