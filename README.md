@@ -83,23 +83,55 @@ A arquitetura foi projetada para ser escalável, modular e educativa — um play
 ## 4. Estrutura Básica
 
 ```
-self-study-organizer/
-├── backend/
-│   ├── api-gateway/          # Spring Cloud Gateway
-│   ├── auth-service/         # Autenticação e autorização
-│   ├── notes-service/        # Gerenciamento de notas
-│   ├── courses-service/      # Cursos, módulos e etapas
-│   ├── repetition-service/   # Algoritmos de spaced repetition
-│   ├── media-service/        # Upload e indexação de mídia
-│   ├── share-service/        # Compartilhamento de conhecimento
-│   ├── payments-service/     # Gateway de pagamentos
-│   └── pomodoro-service/     # Técnica Pomodoro
-├── frontend/
-│   ├── web/                  # Angular
-│   └── mobile/               # Flutter
-└── docker/
-    ├── docker-compose.yml    # Orquestração dos serviços
-    └── .env.example
+backend/
+├── config/                          # Configurações centralizadas
+│   ├── application.yml
+│   ├── kafka-config/
+│   └── security-config/
+│
+├── common/                          # Código compartilhado entre serviços
+│   ├── dto/                         # DTOs globais
+│   ├── exception/                   # Exceções e handlers
+│   ├── security/                    # JWT, autenticação
+│   └── utils/                       # Utilitários comuns
+│
+├── infrastructure/                  # Infraestrutura técnica
+│   ├── persistence/
+│   │   ├── repositories/           # Interfaces Repository
+│   │   └── mappings/              # Mapeamentos Entity <-> DTO
+│   ├── messaging/
+│   │   ├── producer/              # Produtores Kafka
+│   │   └── consumer/              # Consumidores Kafka
+│   └── cache/                      # Redis (futuro)
+│
+└── services/                       # Microserviços
+    ├── user-service/               # Serviço de Usuários
+    │   ├── api/                    # Camada de API
+    │   │   ├── controller/         # REST endpoints
+    │   │   └── dto/               # DTOs específicos do serviço
+    │   ├── application/            # Camada de Aplicação
+    │   │   ├── service/           # Regras de negócio
+    │   │   └── mapper/            # Mapeadores específicos
+    │   ├── domain/                 # Camada de Domínio (DDD)
+    │   │   ├── model/             # Entidades de domínio
+    │   │   ├── repository/        # Interfaces de repositório
+    │   │   └── value-objects/     # Value Objects
+    │   ├── infrastructure/         # Infraestrutura do serviço
+    │   │   ├── persistence/
+    │   │   │   ├── entities/      # Entidades JPA
+    │   │   │   └── repositories/  # Implementações Repository
+    │   │   └── events/
+    │   │       ├── publishers/    # Publicadores de eventos
+    │   │       └── listeners/     # Listeners de eventos
+    │   └── UserServiceApplication.java
+    │
+    ├── order-service/              # Serviço de Pedidos
+    │   └── [mesma estrutura]
+    │
+    └── shared/                     # Compartilhado entre serviços
+        └── events/
+            ├── user-events/       # Eventos relacionados a usuário
+            └── order-events/      # Eventos relacionados a pedidos
 ```
 
 ---
