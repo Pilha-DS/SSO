@@ -167,7 +167,7 @@ frontend/mobile/
 ## 6. Tecnologias e Créditos
 
 |Tecnologia|Versão|Créditos|
----
+|---|---|---|
 |Flutter|3.24.x|Google|
 |Dart|3.5.x|Google|
 |Riverpod|2.5.x|Riverpod|
