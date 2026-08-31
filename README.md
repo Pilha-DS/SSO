@@ -164,35 +164,11 @@ frontend/mobile/
 
 ---
 
-## 6. Instalação
-Pré-requisitos
+## 6. Tecnologias e Créditos
 
-    Instalacao Avancada
-    Docker e Docker Compose ou kubernets
-
-    Instalacao avancada
-    Java 21 LTS
-
-    Node.js 18+ + Angular CLI
-
-    Flutter SDK (para mobile)
-
-Opção 1: Ambiente Completo (Docker)
-
-```
-# Clone o repositório
-git clone https://github.com/Pilha-DS/self-study-organizer.git
-cd self-study-organizer
-
-# Configure as variáveis de ambiente
-cp docker/.env.example docker/.env
-# Edite o .env com suas configurações
-
-# Inicie todos os serviços
-docker-compose up -d
-
-# Acesse:
-# - Web: http://localhost:4200
-# - API Gateway: http://localhost:8080
-# - Swagger UI: http://localhost:8080/swagger-ui.html
-```
+|Tecnologia|Versão|Créditos|
+|Flutter|3.24.x|Google|
+|Dart|3.5.x|Google|
+|Riverpod|2.5.x|Riverpod|
+|Dio|5.4.x|Flutter Community|
+|Hive|2.2.x|Hive|
