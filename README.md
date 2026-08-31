@@ -46,7 +46,7 @@ A arquitetura foi projetada para ser escalável, modular e educativa — um play
                               │
                               ▼
 ┌─────────────────────────────────────────────────────────────┐
-│                     API Gateway (Spring Cloud)              │
+│                         API Gateway                         │
 └─────────────────────────────────────────────────────────────┘
                               │
                               ▼
@@ -164,12 +164,50 @@ frontend/mobile/
 
 ---
 
-## 6. Tecnologias e Créditos
+## 6.  Meus Créditos
 
-|Tecnologia|Versão|Créditos|
-|---|---|---|
-|Flutter|3.24.x|Google|
-|Dart|3.5.x|Google|
-|Riverpod|2.5.x|Riverpod|
-|Dio|5.4.x|Flutter Community|
-|Hive|2.2.x|Hive|
+    "Pilha-DS" — Desenvolvedor e Estudante de Ciência da Computação
+
+### Sobre mim
+
+Sou um entusiasta de software e estudante de Ciência da Computação. Crio projetos para aprender, aplicar conceitos da universidade e, principalmente, ajudar outras pessoas que estão na mesma jornada de autodidatismo que eu.
+
+#### Este projeto
+
+Este projeto nasceu em agosto de 2026, a partir de um problema que enfrentei enquanto tentava estudar em casa. Ao buscar uma solução para essa dificuldade, percebi que ela também poderia ajudar outras pessoas que passam por situações semelhantes. Por isso, decidi disponibilizar o projeto para que mais pessoas possam utilizá-lo e se beneficiar dele.
+
+- Microserviços e arquitetura distribuída
+
+- Sistemas orientados a eventos com Kafka
+
+- Design patterns e princípios SOLID
+
+- Desenvolvimento full-stack
+
+- DevOps e containerização
+
+### Como contribuir
+
+Este é um projeto de estudo, portanto não pretendo oferecer suporte ativo de longo prazo. No entanto, se você se sentir inspirado e quiser contribuir com código, ideias ou melhorias, sinta-se à vontade para abrir uma issue ou pull request. Toda ajuda é bem-vinda, e quem sabe este projeto não se torna uma comunidade?
+
+### Lisenca
+
+```
+Este projeto é licenciado sob a GPL (GNU General Public License).
+
+Você pode:
+✅ Usar, modificar e distribuir o código
+✅ Oferecer como SaaS sem compartilhar modificações
+✅ Vender como serviço hospedado
+
+Você deve:
+⚠️ Compartilhar o código-fonte original e modificado se distribuir o software
+⚠️ Manter os avisos de direitos autorais
+⚠️ Licenciar quaisquer versões modificadas sob a mesma licença GPL
+```
+
+Contato
+
+    🌐 GitHub: github.com/Pilha-DS
+
+    📫 Email: [jonathan.cardoso2212@gmail.com]
