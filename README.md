@@ -80,86 +80,33 @@ A arquitetura foi projetada para ser escalável, modular e educativa — um play
 
 ---
 
-## 4. Estrutura Básica
-
-```
-backend/
-├── config/                          # Configurações centralizadas
-│   ├── application.yml
-│   ├── kafka-config/
-│   └── security-config/
-│
-├── common/                          # Código compartilhado entre serviços
-│   ├── dto/                         # DTOs globais
-│   ├── exception/                   # Exceções e handlers
-│   ├── security/                    # JWT, autenticação
-│   └── utils/                       # Utilitários comuns
-│
-├── infrastructure/                  # Infraestrutura técnica
-│   ├── persistence/
-│   │   ├── repositories/           # Interfaces Repository
-│   │   └── mappings/              # Mapeamentos Entity <-> DTO
-│   ├── messaging/
-│   │   ├── producer/              # Produtores Kafka
-│   │   └── consumer/              # Consumidores Kafka
-│   └── cache/                      # Redis (futuro)
-│
-└── services/                       # Microserviços
-    ├── user-service/               # Serviço de Usuários
-    │   ├── api/                    # Camada de API
-    │   │   ├── controller/         # REST endpoints
-    │   │   └── dto/               # DTOs específicos do serviço
-    │   ├── application/            # Camada de Aplicação
-    │   │   ├── service/           # Regras de negócio
-    │   │   └── mapper/            # Mapeadores específicos
-    │   ├── domain/                 # Camada de Domínio (DDD)
-    │   │   ├── model/             # Entidades de domínio
-    │   │   ├── repository/        # Interfaces de repositório
-    │   │   └── value-objects/     # Value Objects
-    │   ├── infrastructure/         # Infraestrutura do serviço
-    │   │   ├── persistence/
-    │   │   │   ├── entities/      # Entidades JPA
-    │   │   │   └── repositories/  # Implementações Repository
-    │   │   └── events/
-    │   │       ├── publishers/    # Publicadores de eventos
-    │   │       └── listeners/     # Listeners de eventos
-    │   └── UserServiceApplication.java
-    │
-    ├── order-service/              # Serviço de Pedidos
-    │   └── [mesma estrutura]
-    │
-    └── shared/                     # Compartilhado entre serviços
-        └── events/
-            ├── user-events/       # Eventos relacionados a usuário
-            └── order-events/      # Eventos relacionados a pedidos
-```
-
----
-
 ## 5. Estrutura Avançada
 ### Backend (Java 21 + Spring Boot)
 
 ```
 backend/
-├── config/                   # Configurações centralizadas
-├── common/                   # Bibliotecas compartilhadas
-│   ├── dto/                  # Data Transfer Objects
-│   ├── exception/            # Tratamento global de exceções
-│   └── security/             # Configurações de segurança JWT
-├── infrastructure/
-│   ├── persistence/          # Repositories JPA
-│   ├── messaging/            # Configuração do Kafka
-│   └── cache/                # Redis (futuro)
+├── config/                    # Configurações
+│   ├── application.yml
+│   └── security/
+│
+├── common/                     # Compartilhado
+│   ├── dto/
+│   ├── exceptions/
+│   ├── security/
+│   └── events/                # Eventos compartilhados
+│
 └── services/
-    ├── [cada serviço]/       # Microserviço individual
-    │   ├── controller/       # REST endpoints
-    │   ├── service/          # Regras de negócio
-    │   ├── model/            # Entidades JPA
-    │   └── event/            # Eventos Kafka
-    └── shared/
-        └── kafka/
-            ├── consumer/     # Consumidores de eventos
-            └── producer/     # Produtores de eventos
+    ├── user-service/
+    │   ├── api/               # Controllers e DTOs de API
+    │   ├── business/          # Regras de negócio + serviços
+    │   ├── domain/            # Entidades e value objects
+    │   ├── repositories/      # Interfaces de repositório
+    │   ├── infrastructure/    # Implementações técnicas
+    │   │   ├── persistence/   # JPA, mapeamentos
+    │   │   └── messaging/     # Kafka producers/consumers
+    │   └── Application.java
+    │
+    └── order-service/         # Mesma estrutura
 ```
 
 ### Frontend
